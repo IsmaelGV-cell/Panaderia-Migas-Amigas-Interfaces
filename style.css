@@ -1,0 +1,532 @@
+@import url("https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Jura:wght@300&family=Just+Another+Hand&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 20px;
+  background: #CB7D36;
+}
+
+.fila {
+  grid-column: 1/13;
+  grid-row: 1/4;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background: rgba(185, 89, 0, 0.87);
+  border: #C45E00;
+  box-shadow: 0px 7px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 0 0 33px 33px;
+  margin-top: -1%;
+  border: 10px solid #C45E00;
+  position: relative;
+}
+.fila a.logo {
+  width: 100%;
+  height: initial;
+  height: 1px;
+  position: relative;
+}
+.fila a.logo img#facebook {
+  width: 5%;
+  height: initial;
+  right: 8%;
+  left: "";
+  top: 15px;
+  bottom: "";
+  border-radius: 10em;
+  border: 2px solid #FFFFFF;
+  position: absolute;
+}
+.fila a.logo img#x {
+  width: 5.2%;
+  height: initial;
+  right: 2%;
+  left: "";
+  top: 15px;
+  bottom: "";
+  border-radius: 10em;
+  border: 2px solid #FFFFFF;
+  position: absolute;
+}
+
+.titulo {
+  font-family: "Just Another Hand";
+  font-size: 8em;
+  font-weight: bolder;
+  align-self: start;
+  width: 35%;
+  text-align: center;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin-top: 2%;
+  margin-bottom: 0%;
+  -webkit-text-stroke: 4px #750707;
+  /* Para navegadores basados en Webkit (Safari y Chrome) */
+  line-height: 1;
+}
+.titulo:link {
+  text-decoration: none;
+  color: #000000;
+}
+.titulo:visited {
+  text-decoration: none;
+  color: #000000;
+}
+
+.imagen {
+  width: 25%;
+  height: initial;
+  width: 25%;
+}
+
+.imagen#bollito {
+  width: 20%;
+  height: initial;
+  margin-bottom: -2.5%;
+  z-index: 1;
+}
+
+div.col-10 {
+  grid-column: 2/12;
+  grid-row: 4/5;
+  background: #C89E77;
+  border: 1px solid #000000;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 69.5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  height: 60%;
+}
+
+.nav a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  font-family: "Just Another Hand";
+  font-size: 2em;
+  text-decoration: none;
+}
+.nav a:link {
+  color: #000000;
+}
+.nav a:visited {
+  color: #000000;
+}
+.nav a:hover {
+  background-color: #D9D9D9;
+  border-radius: 6em;
+  border: 1px solid #EC9E92;
+  height: 50px;
+}
+
+.nav#especial {
+  width: 15%;
+  margin-right: 5%;
+}
+
+.nav#especial img {
+  width: 30%;
+  height: initial;
+}
+
+.nav img {
+  width: 20%;
+  height: initial;
+}
+
+section.col-10 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  grid-column: 2/12;
+  grid-row: 6/7;
+  font-family: "Just Another Hand";
+  font-size: 2.5em;
+  text-align: justify;
+  position: relative;
+}
+
+.col-10 .containerImagen {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border: 2px solid #000000;
+}
+
+.col-10 .containerImagen img {
+  width: 120%;
+  height: 100%;
+}
+
+section.col-10 p {
+  margin: 5%;
+}
+
+.col-10 .png {
+  width: 70%;
+  height: initial;
+  position: absolute;
+  z-index: -1;
+  rotate: -25deg;
+}
+
+section.col-10#segunda {
+  grid-column: 2/12;
+  grid-row: 7/8;
+}
+
+section.col-10#tercera {
+  grid-column: 2/12;
+  grid-row: 8/10;
+  flex-wrap: wrap;
+  position: relative;
+}
+section.col-10#tercera img#mostrador {
+  width: 70%;
+  height: 50%;
+  border-radius: 3em;
+}
+section.col-10#tercera img#barra {
+  position: absolute;
+  right: 65%;
+  left: "";
+  top: "";
+  bottom: 15%;
+  width: 65%;
+  rotate: -25deg;
+  padding: 0%;
+}
+section.col-10#tercera p {
+  margin-top: -7%;
+  margin-left: 15%;
+}
+
+section.col-10#cuarta {
+  grid-column: 2/12;
+  grid-row: 10/11;
+}
+section.col-10#cuarta img {
+  width: 40%;
+  height: initial;
+  border: 1px solid #000000;
+}
+section.col-10#cuarta p {
+  width: 30%;
+  margin-bottom: -7%;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  grid-column: 1/13;
+  grid-row: 11/13;
+  height: 700px;
+  z-index: 1;
+  position: relative;
+}
+footer .contenedorImagen {
+  width: 100%;
+  height: 100%;
+  background-image: url(panes/pan-de-trigo-rustico-foto-principal.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  filter: brightness(70%) contrast(50%) saturate(30%) hue-rotate(380deg);
+  z-index: -1;
+  position: absolute;
+}
+footer iframe {
+  height: 40%;
+  margin-top: -2%;
+}
+footer div.texto {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  color: #FFFFFF;
+  text-align: center;
+}
+footer div.texto .titulo {
+  font-family: "Julius Sans One", sans-serif;
+  font-size: 3.5em;
+  width: 50%;
+  -webkit-text-stroke: 1px #000000;
+  margin-top: 1%;
+  margin-bottom: 0%;
+}
+footer div.texto .subtitulo {
+  font-family: "Julius Sans One", sans-serif;
+  font-size: 2em;
+  box-sizing: content-box;
+  width: 100%;
+  -webkit-text-stroke: 0.5px #000000;
+}
+footer div.texto .pie {
+  font-family: "Jura", sans-serif;
+  font-size: 1.5em;
+  width: 100%;
+  font-weight: bolder;
+}
+footer a.logo {
+  width: 100%;
+  height: 1px;
+  position: relative;
+}
+footer a.logo img#facebook {
+  width: 5%;
+  height: initial;
+  right: "";
+  left: 2%;
+  top: 1em;
+  bottom: "";
+  border-radius: 10em;
+  border: 2px solid #FFFFFF;
+  position: absolute;
+}
+footer a.logo img#x {
+  width: 5%;
+  height: initial;
+  right: "";
+  left: 8%;
+  top: 0.5em;
+  bottom: "";
+  border-radius: 10em;
+  border: 2px solid #FFFFFF;
+  position: absolute;
+}
+
+div.containerFondo {
+  grid-column: 1/13;
+  grid-row: 3/11;
+  width: 100%;
+  height: 100%;
+  background-image: url(panes/photodune-10383425-baker-hands-with-fresh-bread-on-table-m-1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  filter: brightness(70%) contrast(50%) saturate(30%) hue-rotate(380deg);
+  z-index: -1;
+}
+
+section.pincipal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  grid-column: 2/12;
+  grid-row: 5/8;
+  font-family: "Just Another Hand";
+}
+section.pincipal p.titulo {
+  width: 100%;
+  font-size: 5em;
+  -webkit-text-stroke: 1px #750707;
+  margin-top: 0;
+}
+section.pincipal p.contenido {
+  margin-top: 0;
+  text-align: justify;
+  font-size: 3em;
+}
+
+section.imagenes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  grid-column: 1/13;
+  grid-row: 8/10;
+  width: 95%;
+  height: 400px;
+  gap: 1%;
+  margin-left: 2%;
+}
+section.imagenes img {
+  width: 100%;
+  height: 100%;
+  border: 5px solid #CB7D36;
+}
+section.imagenes img:hover {
+  animation-name: rotacionImagen;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+@keyframes rotacionImagen {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(10deg);
+  }
+  50% {
+    transform: rotate(-5deg);
+  }
+  75% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@media screen and (max-width: 428px) {
+  .fila {
+    grid-row: 1/3;
+  }
+  .fila a.logo img#facebook {
+    width: 20%;
+    height: initial;
+    right: "";
+    left: 4%;
+    top: 2%;
+    bottom: "";
+  }
+  .fila a.logo img#x {
+    width: 20%;
+    height: initial;
+    right: 1%;
+    left: "";
+    top: 2%;
+    bottom: "";
+  }
+  .fila a {
+    font-size: 3em;
+  }
+  .fila a.titulo {
+    -webkit-text-stroke: 2px #750707;
+  }
+  div.col-10 {
+    height: 100%;
+    position: relative;
+    z-index: 0;
+    justify-content: space-around;
+    gap: 3em;
+  }
+  .nav a {
+    width: 60%;
+    z-index: 1;
+    font-size: 2em;
+    margin-right: -0.8em;
+  }
+  .nav a:hover {
+    background-color: initial;
+    border-radius: initial;
+    border: initial;
+    height: initial;
+  }
+  .nav img {
+    width: 30%;
+    height: initial;
+    position: absolute;
+    z-index: -1;
+  }
+  section.col-10 {
+    flex-wrap: wrap;
+    font-size: 1.5em;
+  }
+  .col-10 .containerImagen {
+    width: 90%;
+    height: 50%;
+  }
+  section.col-10#segunda {
+    margin-top: 50%;
+  }
+  .col-10 .png {
+    width: 100%;
+    height: initial;
+    top: 100%;
+  }
+  section.col-10#tercera {
+    margin-top: 20%;
+    gap: 2em;
+  }
+  section.col-10#tercera p {
+    width: 100%;
+    margin-left: 0;
+  }
+  section.col-10#tercera img#mostrador {
+    width: 100%;
+    height: initial;
+  }
+  section.col-10#tercera img#barra {
+    width: 90%;
+    height: initial;
+    top: 1%;
+  }
+  section.col-10#cuarta {
+    margin-top: 20%;
+  }
+  section.col-10#cuarta img {
+    width: 100%;
+    height: initial;
+  }
+  section.col-10#cuarta p {
+    width: 100%;
+  }
+  footer {
+    width: 100%;
+  }
+  footer iframe {
+    height: 30%;
+  }
+  footer a.logo img#x {
+    width: 10%;
+    height: initial;
+    right: 2%;
+    left: "";
+    top: 0%;
+    bottom: "";
+    left: initial;
+    margin-top: -4%;
+  }
+  footer a.logo img#facebook {
+    width: 10%;
+    height: initial;
+    right: "";
+    left: 2%;
+    top: 0%;
+    bottom: "";
+  }
+  footer div.texto .titulo {
+    width: 100%;
+    font-size: 2em;
+    -webkit-text-stroke: 0.2px #000000;
+  }
+  footer div.texto .subtitulo {
+    font-size: 1.5em;
+    -webkit-text-stroke: 0.2px #000000;
+  }
+  section.pincipal p.titulo {
+    font-size: 4em;
+  }
+  section.pincipal p.contenido {
+    font-size: 2em;
+  }
+  section.imagenes {
+    height: auto;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 20%;
+  }
+  section.imagenes img {
+    width: 40%;
+    height: 20%;
+  }
+  section.imagenes img.em {
+    width: 90%;
+    height: initial;
+  }
+}/*# sourceMappingURL=style.css.map */

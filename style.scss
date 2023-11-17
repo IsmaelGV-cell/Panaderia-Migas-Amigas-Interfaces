@@ -1,0 +1,485 @@
+@import "mixins.scss";
+@import "variables.scss";
+@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Jura:wght@300&family=Just+Another+Hand&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    @include body-grid-12column-gap20x();
+    background: $colorFondo;
+}
+
+.fila {
+    @include grid-position(1, 13, 1, 4);
+    @include flex-general(wrap, space-between);
+    @include box-styles($filaBackgroundColor, $filaBorderColor, $filaBoxShadow, $filaBorderRadius);
+    margin-top: -1%;
+    border: 10px solid $filaBorderColor;
+    position: relative;
+
+    a.logo {
+        @include image-styles($width100);
+        height: 1px;
+        position: relative;
+
+        img#facebook {
+            @include image-styles($navEspecialMarginRight);
+            @include absolute-position(8%, "", 15px, "");
+            @include botones-nav();
+        }
+
+        img#x {
+            @include image-styles(5.2%);
+            @include absolute-position(2%, "", 15px, "");
+            @include botones-nav();
+        }
+    }
+}
+
+
+.titulo {
+    @include font-styles($font-JAH, $tituloFontSize);
+    font-weight: bolder;
+    align-self: start;
+    width: $tituloWidth;
+    text-align: center;
+    text-shadow: $boxdow;
+    margin-top: 2%;
+    margin-bottom: 0%;
+    -webkit-text-stroke: 4px $tituloTextStrokeColor;
+    /* Para navegadores basados en Webkit (Safari y Chrome) */
+    line-height: $tituloLineHeight;
+
+    &:link {
+        @include enlaces-negros();
+    }
+
+    &:visited {
+        @include enlaces-negros();
+    }
+}
+
+.imagen {
+    @include image-styles($imagenWidth);
+    width: $imagenWidth;
+}
+
+.imagen#bollito {
+    @include image-styles($bollitoWidth);
+    margin-bottom: $bollitoMarginBottom;
+    z-index: 1;
+}
+
+div.col-10 {
+    @include grid-position(2, 12, 4, 5);
+    @include box-styles($col-10BackgroundColor, $border-general, $boxdow, 69.5px);
+    @include flex-general();
+    height: 60%;
+}
+
+.nav a {
+    @include flex-general();
+    @include font-styles($font-JAH, $navFontSize);
+    text-decoration: none;
+
+
+    &:link {
+        color: $negro;
+    }
+
+    &:visited {
+        color: $negro;
+    }
+
+    &:hover {
+        background-color: $hoverNav;
+        border-radius: 6em;
+        border: 1px solid $bordeNav;
+        height: 50px;
+    }
+}
+
+.nav#especial {
+    width: 15%;
+    margin-right: $navEspecialMarginRight;
+}
+
+.nav#especial img {
+    @include image-styles(30%);
+}
+
+.nav img {
+    @include image-styles(20%);
+}
+
+section.col-10 {
+    @include flex-general();
+    @include grid-position(2, 12, 6, 7);
+    @include font-styles($font-JAH, 2.5em);
+    text-align: justify;
+    position: relative;
+    
+}
+
+
+.col-10 .containerImagen {
+    @include image-styles($width100, $width100);
+    overflow: hidden;
+    border: $col-10ContainerImagenBorder;
+}
+
+.col-10 .containerImagen img {
+    @include image-styles(120%, $width100);
+}
+
+section.col-10 p {
+    margin: $navEspecialMarginRight;
+}
+
+.col-10 .png {
+    @include image-styles($col-10PNGWidth);
+    position: absolute;
+    z-index: -1;
+    rotate: $col-10PNGRotate;
+}
+
+section.col-10#segunda {
+    @include grid-position(2, 12, 7, 8);
+}
+
+section.col-10#tercera {
+    @include grid-position(2, 12, 8, 10);
+    flex-wrap: wrap;
+    position: relative;
+
+    img#mostrador {
+        @include image-styles($col-10PNGWidth, $textoTituloWidth);
+        border-radius: 3em;
+    }
+
+    img#barra {
+        position: absolute;
+        @include absolute-position(65%, "", "", 15%);
+        width: $barraPNGTamaño;
+        rotate: $col-10PNGRotate;
+        padding: 0%;
+    }
+
+    p {
+        margin-top: -7%;
+        margin-left: $margin-15;
+    }
+}
+
+section.col-10#cuarta {
+    @include grid-position(2, 12, 10, 11);
+
+    img {
+        @include image-styles($cuartaImgWidth);
+        border: 1px solid $negro;
+    }
+
+    p {
+        width: 30%;
+        margin-bottom: -7%;
+
+    }
+}
+
+footer {
+    @include flex-general(wrap);
+    @include grid-position(1, 13, 11, 13);
+    height: $footerHeight;
+    z-index: 1;
+    position: relative;
+
+    .contenedorImagen {
+        @include image-styles($width100, $width100);
+        @include containerImagen($imagenContenedor1);
+        position: absolute;
+    }
+
+    iframe {
+        height: $cuartaImgWidth;
+        margin-top: -2%;
+    }
+
+    div.texto {
+        @include flex-general(wrap);
+        width: $width100;
+        color: $blanco;
+        text-align: center;
+
+
+        .titulo {
+            @include font-styles($font-Julius, 3.5em);
+            width: $textoTituloWidth;
+            -webkit-text-stroke: 1px $negro;
+            margin-top: 1%;
+            margin-bottom: 0%;
+        }
+
+        .subtitulo {
+            @include font-styles($font-Julius, 2em);
+            box-sizing: content-box;
+            width: $width100;
+            -webkit-text-stroke: 0.5px $negro;
+        }
+
+        .pie {
+            @include font-styles($font-Jura, 1.5em);
+            width: $width100;
+            font-weight: bolder;
+        }
+    }
+
+    a.logo {
+        @include image-styles($width100, 1px);
+        position: relative;
+
+        img#facebook {
+            @include image-styles($navEspecialMarginRight);
+            @include absolute-position("", 2%, 1em, "");
+            @include botones-nav();
+        }
+
+        img#x {
+            @include image-styles(5%);
+            @include absolute-position("", 8%, 0.5em, "");
+            @include botones-nav();
+        }
+    }
+}
+
+div.containerFondo {
+    @include grid-position(1, 13, 3, 11);
+    @include image-styles($width100, $width100);
+    @include containerImagen($imagenContenedor2);
+}
+
+section.pincipal {
+    @include flex-general(wrap);
+    @include grid-position(2, 12, 5, 8);
+    font-family: $font-JAH;
+
+    p.titulo {
+        width: $width100;
+        font-size: 5em;
+        -webkit-text-stroke: 1px $tituloTextStrokeColor;
+        margin-top: 0;
+    }
+
+    p.contenido {
+        margin-top: 0;
+        text-align: justify;
+        font-size: 3em;
+    }
+}
+
+section.imagenes {
+    @include flex-general();
+    @include grid-position(1, 13, 8, 10);
+    @include image-styles(95%, 400px);
+    gap: 1%;
+    margin-left: 2%;
+
+
+    img {
+        @include image-styles($width100, $width100);
+        border: 5px solid $colorFondo;
+
+    }
+
+    img:hover {
+        @include animacion-linear-infinita(rotacionImagen, 1s);
+    }
+
+    @keyframes rotacionImagen {
+        0% {
+            transform: rotate(0deg)
+        }
+
+        25% {
+            transform: rotate(10deg);
+        }
+
+        50% {
+            transform: rotate(-5deg);
+        }
+
+        75% {
+            transform: rotate(-10deg);
+        }
+
+        100% {
+            transform: rotate(0deg);
+        }
+    }
+}
+
+@media screen and (max-width: 428px) {
+    .fila {
+        grid-row: 1/3;
+
+        a.logo {
+            img#facebook {
+                @include image-styles(20%);
+                @include absolute-position("", 4%, 2%, "");
+            }
+
+            img#x {
+                @include image-styles(20%);
+                @include absolute-position(1%, "", 2%, "");
+            }
+        }
+
+        a {
+            font-size: 3em;
+
+            &.titulo {
+                -webkit-text-stroke: 2px $tituloTextStrokeColor;
+            }
+        }
+    }
+
+    div.col-10 {
+        height: 100%;
+        position: relative;
+        z-index: 0;
+        justify-content: space-around;
+        gap: 3em;
+
+    }
+
+    .nav a {
+        width: 60%;
+        z-index: 1;
+        font-size: 2em;
+        margin-right: -0.8em;
+
+        &:hover {
+            background-color: initial;
+            border-radius: initial;
+            border: initial;
+            height: initial;
+        }
+    }
+
+    .nav img {
+        @include image-styles(30%);
+        position: absolute;
+        z-index: -1;
+    }
+
+    section.col-10 {
+        flex-wrap: wrap;
+        font-size: 1.5em;
+    }
+
+    .col-10 .containerImagen {
+        @include image-styles(90%, 50%);
+    }
+
+    section.col-10#segunda {
+        margin-top: 50%;
+    }
+
+    .col-10 .png {
+        @include image-styles($width100);
+        top: 100%;
+    }
+
+    section.col-10#tercera {
+        margin-top: 20%;
+        gap: 2em;
+
+        p {
+            width: 100%;
+            margin-left: 0;
+        }
+
+        img#mostrador {
+            @include image-styles($width100);
+        }
+
+        img#barra {
+            @include image-styles(90%);
+            top: 1%;
+        }
+    }
+
+    section.col-10#cuarta {
+        margin-top: 20%;
+
+        img {
+            @include image-styles($width100);
+        }
+
+        p {
+            width: 100%;
+        }
+    }
+
+    footer {
+        width: 100%;
+
+        iframe {
+            height: 30%;
+        }
+
+        a.logo img#x {
+            @include image-styles(10%);
+            @include absolute-position(2%, "", 0%, "");
+            left: initial;
+            margin-top: -4%;
+        }
+
+        a.logo img#facebook {
+            @include image-styles(10%);
+            @include absolute-position("", 2%, 0%, "");
+        }
+
+        div.texto {
+            .titulo {
+                width: 100%;
+                font-size: 2em;
+                -webkit-text-stroke: 0.2px $negro;
+            }
+
+            .subtitulo {
+                font-size: 1.5em;
+                -webkit-text-stroke: 0.2px $negro;
+            }
+        }
+    }
+
+    section.pincipal {
+
+        p.titulo {
+            font-size: 4em;
+        }
+
+        p.contenido {
+            font-size: 2em;
+        }
+    }
+
+    section.imagenes {
+        height: auto;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-bottom: 20%;
+
+
+        img {
+            @include image-styles(40%, 20%);
+        }
+
+        img.em {
+            @include image-styles(90%);
+        }
+    }
+
+}

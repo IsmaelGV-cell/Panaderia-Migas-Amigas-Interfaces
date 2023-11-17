@@ -1,0 +1,70 @@
+@import "variables.scss";
+
+@mixin body-grid-12column-gap20x() {
+  display: grid;
+  grid-template-columns: $columnas;
+  gap: 20px;
+}
+
+@mixin box-styles($background, $border, $box-shadow, $border-radius) {
+  background: $background;
+  border: $border;
+  box-shadow: $box-shadow;
+  border-radius: $border-radius;
+}
+
+@mixin font-styles($font-family, $font-size) {
+  font-family: $font-family;
+  font-size: $font-size;
+}
+
+@mixin flex-general($wrap: nowrap, $justify: center) {
+  display: flex;
+  align-items: center;
+  justify-content: $justify;
+  flex-wrap: $wrap;
+}
+
+@mixin grid-position($comienzo-columna, $fin-columna, $comienzo-fila, $fin-fila) {
+  grid-column:#{$comienzo-columna} / #{$fin-columna};
+  grid-row: #{$comienzo-fila} / #{$fin-fila};
+}
+
+@mixin image-styles($width, $height: initial) {
+  width: $width;
+  height: $height;
+}
+
+@mixin absolute-position($right: initial, $left: initial, $top: initial, $bottom: initial) {
+  right: $right;
+  left: $left;
+  top: $top;
+  bottom: $bottom;
+}
+
+@mixin botones-nav() {
+  border-radius: 10em;
+  border: 2px solid $blanco;
+  position: absolute;
+}
+
+@mixin enlaces-negros() {
+  text-decoration: none;
+  color: $negro;
+}
+
+@mixin containerImagen($url) {
+  background-image: $url;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  filter: brightness(70%) contrast(50%) saturate(30%) hue-rotate(380deg);
+  z-index: -1;
+}
+
+@mixin animacion-linear-infinita($animacion, $duracion) {
+  animation-name: $animacion;
+  animation-duration: $duracion;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
